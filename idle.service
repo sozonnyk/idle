@@ -1,0 +1,16 @@
+[Unit]
+Description=Idle TV off
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+User=andrew
+Type=simple
+Restart=always
+RestartSec=1
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ExecStart=/home/andrew/idle.py
+
+[Install]
+WantedBy=multi-user.target
