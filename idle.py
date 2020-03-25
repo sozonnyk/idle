@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# dbus-monitor --address "unix:path=/run/user/1000/bus" "type='signal',interface='org.gnome.ScreenSaver',member='ActiveChanged'"
 
 import sys
 import dbus
